@@ -25,6 +25,12 @@ jobs:
           yes | $ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager --licenses > /dev/null 2>&1 || true
           $ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager "platforms;android-36" "build-tools;36.0.0" "platform-tools" > /dev/null
 
+      - name: Generate Gradle Wrapper
+        run: |
+          # Gera os arquivos do wrapper (gradlew, jar, etc)
+          gradle wrapper --gradle-version 8.13
+        # Nota: O runner do GitHub já tem 'gradle' instalado, então podemos usar o comando direto.
+
       - name: Make gradlew executable
         run: chmod +x ./gradlew
 
