@@ -1,0 +1,6 @@
+{
+  "name": "BurgerPrint",
+  "description": "Aplicativo para impressão térmica Bluetooth com ESC/POS para comandas de hamburguerias e restaurantes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
